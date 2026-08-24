@@ -1,0 +1,204 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LexicoHub - Serviços profissionais de tradução juramentada, técnica, localização e interpretação.">
+  <title>LexicoHub | Tradução e Localização</title>
+
+  <!-- Importação de Fontes do Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos Externos -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========================================== -->
+  <!-- HEADER / NAVEGAÇÃO                         -->
+  <!-- ========================================== -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="#" class="logo">LEXICOHUB</a>
+      
+      <!-- Checkbox hack para menu mobile sem JavaScript -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Abrir menu de navegação">
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+      </label>
+
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="#sobre" class="nav-link">Sobre</a></li>
+          <li><a href="#servicos" class="nav-link">Serviços</a></li>
+          <li><a href="#depoimentos" class="nav-link">Depoimentos</a></li>
+          <li><a href="#contato" class="nav-link btn-nav">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========================================== -->
+    <!-- HERO SECTION                               -->
+    <!-- ========================================== -->
+    <section class="hero">
+      <div class="container hero-container">
+        <h1 class="hero-title">Sua mensagem sem fronteiras linguísticas.</h1>
+        <p class="hero-subtitle">Oferecemos soluções de tradução de alta precisão e localização técnica para conectar sua empresa ao mercado global.</p>
+        <a href="#contato" class="btn btn-primary">Solicite um Orçamento</a>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SEÇÃO SOBRE NÓS                            -->
+    <!-- ========================================== -->
+    <section id="sobre" class="section sobre">
+      <div class="container">
+        <h2 class="section-title">Sobre Nós</h2>
+        <div class="sobre-content">
+          <p>A <strong>LexicoHub</strong> é uma agência especializada em serviços linguísticos de alta complexidade. Com mais de uma década de experiência no mercado internacional, unimos rigor técnico, precisão terminológica e sensibilidade cultural para entregar traduções impecáveis.</p>
+          <p>Nossa missão é eliminar barreiras idiomáticas e garantir que a identidade do seu negócio se comunique com total clareza e autoridade em qualquer parte do mundo.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SEÇÃO SERVIÇOS                             -->
+    <!-- ========================================== -->
+    <section id="servicos" class="section servicos">
+      <div class="container">
+        <h2 class="section-title">Nossos Serviços</h2>
+        
+        <div class="grid-servicos">
+          <!-- Card 1 -->
+          <article class="card">
+            <h3 class="card-title">Tradução Juramentada</h3>
+            <p class="card-text">Traduções oficiais com validade jurídica para documentos legais, contratos, certidões e processos de imigração.</p>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="card">
+            <h3 class="card-title">Tradução Técnica</h3>
+            <p class="card-text">Especializada nos setores de engenharia, medicina, TI e finanças, mantendo rigor rigoroso em termos específicos.</p>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="card">
+            <h3 class="card-title">Localização</h3>
+            <p class="card-text">Adaptação cultural completa de softwares, websites, aplicativos e games para o mercado-alvo.</p>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="card">
+            <h3 class="card-title">Interpretação</h3>
+            <p class="card-text">Serviços de interpretação simultânea e consecutiva para conferências, reuniões executivas e eventos formais.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SEÇÃO DEPOIMENTOS                          -->
+    <!-- ========================================== -->
+    <section id="depoimentos" class="section depoimentos">
+      <div class="container">
+        <h2 class="section-title">O que dizem nossos clientes</h2>
+        
+        <div class="grid-depoimentos">
+          
+          <!-- INÍCIO DO BLOCO DE DEPOIMENTO (Para adicionar novo depoimento, copie a partir daqui) -->
+          <!-- Depoimento 1 -->
+          <blockquote class="depoimento-card">
+            <p class="depoimento-texto">"A LexicoHub superou todas as nossas expectativas. A tradução do nosso software foi realizada antes do prazo e com precisão cultural impressionante."</p>
+            <cite class="depoimento-autor">
+              <strong>Mariana Souza</strong>
+              <span>Diretora de Produto, TechGlobal</span>
+            </cite>
+          </blockquote>
+          <!-- FIM DO BLOCO DE DEPOIMENTO 1 -->
+
+          <!-- Depoimento 2 -->
+          <blockquote class="depoimento-card">
+            <p class="depoimento-texto">"Trabalho impecável em nossas traduções juramentadas. Processo ágil, seguro e com atendimento extremamente profissional."</p>
+            <cite class="depoimento-autor">
+              <strong>Carlos Eduardo Mendes</strong>
+              <span>Advogado Sênior, Mendes & Associados</span>
+            </cite>
+          </blockquote>
+          <!-- FIM DO BLOCO DE DEPOIMENTO 2 -->
+
+          <!-- Depoimento 3 -->
+          <blockquote class="depoimento-card">
+            <p class="depoimento-texto">"A equipe de interpretação simultânea atendeu nossa conferência internacional com maestria. Excelente parceiro estratégico."</p>
+            <cite class="depoimento-autor">
+              <strong>Fernanda Lima</strong>
+              <span>Coordenadora de Eventos, Innovate Conf</span>
+            </cite>
+          </blockquote>
+          <!-- FIM DO BLOCO DE DEPOIMENTO 3 -->
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SEÇÃO CONTATO                              -->
+    <!-- ========================================== -->
+    <section id="contato" class="section contato">
+      <div class="container">
+        <h2 class="section-title">Fale Conosco</h2>
+        
+        <div class="contato-wrapper">
+          <!-- Informações de Contato -->
+          <div class="contato-info">
+            <h3>Entre em contato</h3>
+            <p>Precisa de um orçamento rápido ou tem dúvidas sobre nossos serviços? Envie uma mensagem ou entre em contato diretamente.</p>
+            
+            <ul class="info-list">
+              <li><strong>Email:</strong> contato@lexicohub.com</li>
+              <li><strong>Telefone:</strong> +55 (11) 99999-8888</li>
+              <li><strong>Atendimento:</strong> Seg. a Sex., das 08h às 18h</li>
+            </ul>
+          </div>
+
+          <!-- Formulário de Contato -->
+          <!-- INSTRUÇÃO FORMSPREE: Substitua "SEU_ID_AQUI" pelo seu ID gerado no Formspree -->
+          <form action="https://formspree.io/f/SEU_ID_AQUI" method="POST" class="contato-form">
+            <div class="form-group">
+              <label for="nome">Nome Completo</label>
+              <input type="text" id="nome" name="nome" required placeholder="Seu nome">
+            </div>
+
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" required placeholder="seu@email.com">
+            </div>
+
+            <div class="form-group">
+              <label for="mensagem">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Descreva seu projeto ou dúvida..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full">Enviar Mensagem</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================== -->
+  <!-- FOOTER                                     -->
+  <!-- ========================================== -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <p class="copyright">&copy; 2026 LexicoHub. Todos os direitos reservados.</p>
+      <a href="#" class="logo logo-footer">LEXICOHUB</a>
+    </div>
+  </footer>
+
+</body>
+</html>
