@@ -5,26 +5,34 @@
 /* ========================================== */
 @font-face {
   font-family: 'Disket Mono';
-  src: url('./assets/fonts/Disket-Mono.woff2') format('woff2'),
-       url('./assets/fonts/Disket-Mono.woff') format('woff');
+  src: url('./assets/fonts/Disket-Mono-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Disket Mono';
+  src: url('./assets/fonts/Disket-Mono-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* ========================================== */
-/* VARIÁVEIS CSS (DESIGN SYSTEM)              */
+/* VARIÁVEIS CSS (DESIGN SYSTEM - PALETA "PAPEL")*/
 /* ========================================== */
 :root {
-  --primary-color: #0A192F;
-  --primary-light: #172A45;
-  --accent-color: #64FFDA;
-  --bg-color: #F8F9FA;
-  --card-bg: #FFFFFF;
-  --text-color: #212529;
-  --text-muted: #6C757D;
-  --border-color: #E9ECEF;
-  
+  --primary-color: #6B4A32;
+  --primary-light: #8B6849;
+  --accent-color: #C9A66B;
+  --bg-color: #F5EFE2;
+  --card-bg: #FFFBF3;
+  --text-color: #3E2E22;
+  --text-muted: #8A7458;
+  --border-color: #E4D6C1;
+  --light-surface: #FFF8EC;
+
   --font-logo: 'Disket Mono', 'Courier New', Courier, monospace;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
@@ -100,7 +108,7 @@ a {
   font-size: 1.25rem;
   font-weight: bold;
   letter-spacing: 2px;
-  color: #FFFFFF;
+  color: var(--light-surface);
   text-transform: uppercase;
 }
 
@@ -132,7 +140,7 @@ a {
 }
 
 .nav-link {
-  color: #FFFFFF;
+  color: var(--light-surface);
   font-weight: 500;
   font-size: 0.95rem;
 }
@@ -143,12 +151,47 @@ a {
 
 .btn-nav {
   padding: 0.5rem 1rem;
-  border: 1px solid #FFFFFF;
+  border: 1px solid var(--light-surface);
   border-radius: 4px;
 }
 
 .btn-nav:hover {
-  background-color: #FFFFFF;
+  background-color: var(--light-surface);
+  color: var(--primary-color);
+}
+
+/* ========================================== */
+/* SELETOR DE IDIOMA                          */
+/* ========================================== */
+.lang-switch {
+  display: inline-flex;
+  border: 1px solid rgba(255, 248, 236, 0.4);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.lang-option {
+  background: transparent;
+  border: none;
+  color: var(--light-surface);
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 0.4rem 0.75rem;
+  cursor: pointer;
+}
+
+.lang-option + .lang-option {
+  border-left: 1px solid rgba(255, 248, 236, 0.4);
+}
+
+.lang-option:hover {
+  background-color: rgba(255, 248, 236, 0.15);
+}
+
+.lang-option.is-active {
+  background-color: var(--accent-color);
   color: var(--primary-color);
 }
 
@@ -167,7 +210,7 @@ a {
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
   display: block;
-  background: #FFFFFF;
+  background: var(--light-surface);
   height: 2px;
   width: 2rem;
   position: relative;
@@ -190,7 +233,7 @@ a {
   padding-top: calc(var(--header-height) + 4rem);
   padding-bottom: 6rem;
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
-  color: #FFFFFF;
+  color: var(--light-surface);
   text-align: center;
 }
 
@@ -222,7 +265,7 @@ a {
 }
 
 .btn-primary {
-  background-color: #FFFFFF;
+  background-color: var(--light-surface);
   color: var(--primary-color);
 }
 
@@ -235,6 +278,12 @@ a {
 /* ========================================== */
 /* SOBRE NÓS                                  */
 /* ========================================== */
+.sobre-mark {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
 .sobre-content {
   max-width: 800px;
   margin: 0 auto;
@@ -251,12 +300,13 @@ a {
 /* SERVIÇOS                                   */
 /* ========================================== */
 .servicos {
-  background-color: #FFFFFF;
+  background-color: var(--card-bg);
 }
 
 .grid-servicos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
+  align-items: start;
   gap: 2rem;
 }
 
@@ -290,7 +340,8 @@ a {
 /* ========================================== */
 .grid-depoimentos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
+  align-items: start;
   gap: 2rem;
 }
 
@@ -330,13 +381,12 @@ a {
 /* CONTATO                                    */
 /* ========================================== */
 .contato {
-  background-color: #FFFFFF;
+  background-color: var(--card-bg);
 }
 
 .contato-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  max-width: 480px;
+  margin: 0 auto;
 }
 
 .contato-info h3 {
@@ -350,51 +400,23 @@ a {
   margin-bottom: 2rem;
 }
 
+.info-list {
+  margin-bottom: 2rem;
+}
+
+.contato-cta {
+  margin-top: 0.5rem;
+}
+
 .info-list li {
   margin-bottom: 1rem;
   color: var(--text-color);
 }
 
-.contato-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.form-group label {
-  font-weight: 500;
-  font-size: 0.9rem;
-  color: var(--primary-color);
-}
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid var(--border-color);
-  border-radius: 4px;
-  font-family: inherit;
-  font-size: 1rem;
-  transition: var(--transition);
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: var(--primary-color);
-  box-shadow: 0 0 0 3px rgba(10, 25, 47, 0.1);
-}
-
 .btn-full {
   width: 100%;
   background-color: var(--primary-color);
-  color: #FFFFFF;
+  color: var(--light-surface);
 }
 
 .btn-full:hover {
@@ -406,9 +428,9 @@ a {
 /* ========================================== */
 .footer {
   background-color: var(--primary-color);
-  color: #FFFFFF;
+  color: var(--light-surface);
   padding: 2rem 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 248, 236, 0.15);
 }
 
 .footer-container {
@@ -458,12 +480,6 @@ a {
   /* Ajustes Hero */
   .hero-title {
     font-size: 2rem;
-  }
-
-  /* Layout de Contato em Coluna Única */
-  .contato-wrapper {
-    grid-template-columns: 1fr;
-    gap: 2rem;
   }
 
   /* Ajustes Footer */
